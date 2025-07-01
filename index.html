@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Blog</h1>
+    <div id="posts-list"></div>
+    <button id="add-post-btn">Add New Post</button>
+    <form id="add-post-form" class="hidden">
+      <h2>Add New Post</h2>
+      <input type="text" id="post-title" placeholder="Title" required />
+      <textarea id="post-content" placeholder="Content" required></textarea>
+      <button type="submit">Publish</button>
+      <button type="button" id="cancel-btn">Cancel</button>
+    </form>
+    <div id="post-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <div id="modal-view">
+          <h2 id="modal-title"></h2>
+          <p id="modal-content"></p>
+          <button id="edit-post-btn">Edit</button>
+          <button id="delete-post-btn">Delete</button>
+        </div>
+        <form id="edit-post-form" class="hidden">
+          <h2>Edit Post</h2>
+          <input type="text" id="edit-post-title" required />
+          <textarea id="edit-post-content" required></textarea>
+          <button type="submit">Save</button>
+          <button type="button" id="cancel-edit-btn">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 
